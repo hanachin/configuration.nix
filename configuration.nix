@@ -34,31 +34,44 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
-  # i18n.defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.inputMethod.enabled = "fcitx";
+  i18n.inputMethod.fcitx.engines = with pkgs; [
+    fcitx-engines.mozc
+  ];
   # console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
   # };
+  fonts.fonts = with pkgs; [
+    rictydiminished-with-firacode
+    source-han-mono
+    source-han-code-jp
+    source-han-sans-japanese
+    source-han-serif-japanese
+  ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
 
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   
 
   # Configure keymap in X11
-  services.xserver.layout = "us";
-  # services.xserver.xkbOptions = "ctrl:nocaps";
+  # services.xserver.layout = "us";
+  services.xserver.xkbOptions = "ctrl:nocaps";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
   # Enable sound.
   # sound.enable = true;
-  # hardware.pulseaudio.enable = true;
+  hardware.pulseaudio.enable = false;
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.xserver.libinput.enable = true;
@@ -68,11 +81,27 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
+      alacritty
+      azure-cli
+      google-chrome
+      direnv
+      docker-compose
       firefox
       gh
+      ghq
       git
+      gnomeExtensions.appindicator
+      jq
+      kubectl
+      peco
       rcm
+      slack
+      tig
+      tmux
+      vscode
+      zoom-us
     ];
+    shell = "/run/current-system/sw/bin/zsh";
   };
 
   # List packages installed in system profile. To search, run:
@@ -85,6 +114,7 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
+  programs.zsh.enable = true;
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
@@ -92,6 +122,13 @@
   };
 
   # List services that you want to enable:
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

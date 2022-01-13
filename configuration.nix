@@ -99,6 +99,10 @@
       tig
       tmux
       vscode
+      wineWowPackages.stable
+      wineWowPackages.fonts
+      winetricks
+      xorg.xmodmap
       zoom-us
     ];
     shell = "/run/current-system/sw/bin/zsh";

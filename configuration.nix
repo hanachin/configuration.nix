@@ -86,11 +86,13 @@
       google-chrome
       direnv
       docker-compose
+      emacs
       firefox
       gh
       ghq
       git
       gnomeExtensions.appindicator
+      gnome.gnome-tweaks
       jq
       kubectl
       peco

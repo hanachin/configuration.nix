@@ -44,6 +44,7 @@
   #   keyMap = "us";
   # };
   fonts.fonts = with pkgs; [
+    nerdfonts
     rictydiminished-with-firacode
     source-han-mono
     source-han-code-jp
@@ -94,6 +95,8 @@
       gnomeExtensions.appindicator
       gnome.gnome-tweaks
       jq
+      keybase
+      keybase-gui
       kubectl
       peco
       rcm

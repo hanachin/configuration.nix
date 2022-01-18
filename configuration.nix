@@ -87,6 +87,7 @@
       google-chrome
       direnv
       docker-compose
+      easyeffects
       emacs
       firefox
       gh
@@ -95,8 +96,6 @@
       gnomeExtensions.appindicator
       gnome.gnome-tweaks
       jq
-      keybase
-      keybase-gui
       kubectl
       peco
       rcm
@@ -144,6 +143,9 @@
   
   # YubiKey smartcard mode
   services.pcscd.enable = true;
+
+  services.kbfs.enable = true;
+  services.keybase.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

@@ -97,6 +97,7 @@
       gnome.gnome-tweaks
       jq
       kubectl
+      libreoffice
       peco
       rcm
       slack

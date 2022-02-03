@@ -92,6 +92,7 @@
       firefox
       gh
       ghq
+      gimp
       git
       gnomeExtensions.appindicator
       gnome.gnome-tweaks

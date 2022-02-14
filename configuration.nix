@@ -16,6 +16,11 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernel.sysctl = {
+    "fs.inotify.max_user_watches" = "999999";
+    "fs.inotify.max_queued_events" = "999999";
+    "fs.inotify.max_user_instances" = "999999";
+  };
 
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

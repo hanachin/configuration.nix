@@ -88,7 +88,6 @@
     extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       _1password
-      _1password-gui
       alacritty
       azure-cli
       google-chrome
@@ -124,6 +123,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    _1password-gui
     home-manager
     vim
   ];

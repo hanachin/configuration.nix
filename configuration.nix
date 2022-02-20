@@ -87,6 +87,8 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
+      _1password
+      _1password-gui
       alacritty
       azure-cli
       google-chrome

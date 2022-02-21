@@ -86,37 +86,6 @@
   users.users.sei = {
     isNormalUser = true;
     extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      _1password
-      alacritty
-      azure-cli
-      google-chrome
-      direnv
-      docker-compose
-      easyeffects
-      emacs
-      firefox
-      gh
-      ghq
-      gimp
-      git
-      gnomeExtensions.appindicator
-      gnome.gnome-tweaks
-      jq
-      kubectl
-      libreoffice
-      peco
-      rcm
-      slack
-      tig
-      tmux
-      vscode
-      wineWowPackages.stable
-      wineWowPackages.fonts
-      winetricks
-      xorg.xmodmap
-      zoom-us
-    ];
     shell = "/run/current-system/sw/bin/zsh";
   };
 
@@ -124,8 +93,37 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     _1password-gui
+    _1password
+    alacritty
+    azure-cli
+    google-chrome
+    direnv
+    docker-compose
+    easyeffects
+    emacs
+    firefox
+    gh
+    ghq
+    gimp
+    git
+    gnomeExtensions.appindicator
+    gnome.gnome-tweaks
     home-manager
+    jq
+    kubectl
+    libreoffice
+    peco
+    rcm
+    slack
+    tig
+    tmux
     vim
+    vscode
+    wineWowPackages.stable
+    wineWowPackages.fonts
+    winetricks
+    xorg.xmodmap
+    zoom-us
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

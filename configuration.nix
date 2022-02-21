@@ -4,8 +4,9 @@
 
 { config, pkgs, ... }:
 
-
-{
+let
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+in {
   nixpkgs.config.allowUnfree = true;
   imports =
     [ # Include the results of the hardware scan.
@@ -92,8 +93,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    _1password-gui
-    _1password
+    unstable._1password-gui
+    unstable._1password
     alacritty
     azure-cli
     google-chrome

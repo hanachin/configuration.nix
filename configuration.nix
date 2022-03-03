@@ -113,6 +113,7 @@ in {
     jq
     kubectl
     libreoffice
+    obs-studio
     peco
     rcm
     slack

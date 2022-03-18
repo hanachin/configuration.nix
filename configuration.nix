@@ -111,6 +111,7 @@ in {
     gnome.gnome-tweaks
     home-manager
     jq
+    keybase-gui
     kubectl
     libreoffice
     obs-studio

@@ -4,9 +4,7 @@
 
 { config, pkgs, ... }:
 
-let
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-in {
+{
   nixpkgs.config.allowUnfree = true;
   imports =
     [ # Include the results of the hardware scan.
@@ -64,8 +62,9 @@ in {
 
 
   # Enable the GNOME Desktop Environment.
-  # services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.debug = true;
+  # services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   
 
@@ -93,8 +92,8 @@ in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    unstable._1password-gui
-    unstable._1password
+    _1password-gui
+    _1password
     alacritty
     azure-cli
     google-chrome

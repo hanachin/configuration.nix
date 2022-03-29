@@ -109,6 +109,7 @@
     gnomeExtensions.appindicator
     gnome.gnome-tweaks
     home-manager
+    hub
     jq
     keybase-gui
     kubectl

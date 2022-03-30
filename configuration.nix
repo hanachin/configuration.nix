@@ -4,7 +4,9 @@
 
 { config, pkgs, ... }:
 
-{
+let
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+in {
   nixpkgs.config.allowUnfree = true;
   imports =
     [ # Include the results of the hardware scan.
@@ -62,9 +64,9 @@
 
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.debug = true;
-  # services.xserver.displayManager.lightdm.enable = true;
+  # services.xserver.displayManager.gdm.enable = true;
+  # services.xserver.displayManager.gdm.debug = true;
+  services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
   
 
@@ -92,8 +94,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    _1password-gui
-    _1password
+    unstable._1password-gui
+    unstable._1password
     alacritty
     azure-cli
     google-chrome
@@ -119,6 +121,7 @@
     rcm
     slack
     tig
+    unzipNLS
     tmux
     vim
     vscode
@@ -138,6 +141,8 @@
     enableSSHSupport = true;
     pinentryFlavor = "gnome3";
   };
+  programs.wireshark.enable = true;
+  programs.wireshark.package = pkgs.wireshark-qt;
 
   # List services that you want to enable:
   security.rtkit.enable = true;

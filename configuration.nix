@@ -109,6 +109,7 @@ in {
     gimp
     git
     gnomeExtensions.appindicator
+    gnome.gnome-sound-recorder
     gnome.gnome-tweaks
     home-manager
     hub

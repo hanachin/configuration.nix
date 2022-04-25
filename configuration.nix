@@ -104,7 +104,7 @@ in {
     easyeffects
     emacs
     firefox
-    gh
+    unstable.gh
     ghq
     gimp
     git

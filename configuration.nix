@@ -87,7 +87,7 @@ in {
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.sei = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" "vboxusers" ]; # Enable ‘sudo’ for the user.
     shell = "/run/current-system/sw/bin/zsh";
   };
 
@@ -105,6 +105,7 @@ in {
     emacs
     firefox
     unstable.gh
+    genymotion
     ghq
     gimp
     git
@@ -117,6 +118,7 @@ in {
     keybase-gui
     kubectl
     libreoffice
+    lm_sensors
     obs-studio
     peco
     rcm
@@ -130,6 +132,7 @@ in {
     wineWowPackages.fonts
     winetricks
     xorg.xmodmap
+    xsensors
     zoom-us
   ];
 
@@ -179,6 +182,8 @@ in {
 
   virtualisation = {
     docker.enable = true;
+    virtualbox.host.enable = true;
+    virtualbox.host.enableExtensionPack = true;
   };
 }
 

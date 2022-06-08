@@ -115,6 +115,7 @@ in {
     home-manager
     hub
     jq
+    jwt-cli
     keybase-gui
     kubectl
     libreoffice

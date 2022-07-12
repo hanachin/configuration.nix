@@ -120,6 +120,7 @@ in {
     kubectl
     libreoffice
     lm_sensors
+    microsoft-edge
     obs-studio
     peco
     rcm

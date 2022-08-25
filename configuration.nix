@@ -68,6 +68,15 @@ in {
   # services.xserver.displayManager.gdm.debug = true;
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+
+  programs.xss-lock = {
+    enable = true;
+    lockerCommand = "${pkgs.xautolock}/bin/xautolock -locknow";
+  };
+  services.xserver.xautolock = {
+    time = 5;
+    enable = true;
+  };
   
 
   # Configure keymap in X11

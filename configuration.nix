@@ -74,7 +74,6 @@ in {
     lockerCommand = "${pkgs.xautolock}/bin/xautolock -locknow";
   };
   services.xserver.xautolock = {
-    time = 5;
     enable = true;
   };
   

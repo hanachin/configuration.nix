@@ -68,13 +68,14 @@ in {
   # services.xserver.displayManager.gdm.debug = true;
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-
   programs.xss-lock = {
     enable = true;
     lockerCommand = "${pkgs.xautolock}/bin/xautolock -locknow";
   };
   services.xserver.xautolock = {
+    time = 1;
     enable = true;
+    locker = "${pkgs.xsecurelock}/bin/xsecurelock";
   };
   
 
@@ -144,6 +145,7 @@ in {
     wineWowPackages.fonts
     winetricks
     xorg.xmodmap
+    xsecurelock
     xsensors
     zoom-us
   ];

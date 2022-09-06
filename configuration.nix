@@ -73,7 +73,7 @@ in {
     lockerCommand = "${pkgs.xautolock}/bin/xautolock -locknow";
   };
   services.xserver.xautolock = {
-    time = 1;
+    time = 10;
     enable = true;
     locker = "${pkgs.xsecurelock}/bin/xsecurelock";
   };

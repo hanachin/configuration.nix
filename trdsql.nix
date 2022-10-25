@@ -19,4 +19,8 @@ buildGoModule rec {
     homepage = "https://noborus.github.io/trdsql/";
     license = licenses.mit;
   };
+
+  subPackages = [
+    "cmd/trdsql"
+  ];
 }

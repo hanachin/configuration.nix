@@ -139,6 +139,7 @@ in {
     tig
     unzipNLS
     tmux
+    (callPackage ./trdsql.nix {})
     vim
     vscode
     wineWowPackages.stable

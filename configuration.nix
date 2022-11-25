@@ -122,6 +122,7 @@ in {
     gnomeExtensions.appindicator
     gnome.gnome-sound-recorder
     gnome.gnome-tweaks
+    heroku
     home-manager
     hub
     jq

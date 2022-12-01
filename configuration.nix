@@ -4,9 +4,7 @@
 
 { config, pkgs, ... }:
 
-let
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-in {
+{
   nixpkgs.config.allowUnfree = true;
   imports =
     [ # Include the results of the hardware scan.
@@ -104,8 +102,8 @@ in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    unstable._1password-gui
-    unstable._1password
+    _1password-gui
+    _1password
     alacritty
     azure-cli
     google-chrome
@@ -114,7 +112,7 @@ in {
     easyeffects
     emacs
     firefox
-    unstable.gh
+    gh
     genymotion
     ghq
     gimp
@@ -194,7 +192,7 @@ in {
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-  system.stateVersion = "21.11"; # Did you read the comment?
+  system.stateVersion = "22.11"; # Did you read the comment?
 
   virtualisation = {
     docker.enable = true;

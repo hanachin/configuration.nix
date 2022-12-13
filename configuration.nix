@@ -104,6 +104,7 @@
   environment.systemPackages = with pkgs; [
     _1password-gui
     _1password
+    # TODO: move to kitty
     alacritty
     azure-cli
     google-chrome
@@ -126,6 +127,8 @@
     jq
     jwt-cli
     keybase-gui
+    kitty
+    kitty-themes
     kubectl
     libreoffice
     lm_sensors
@@ -133,10 +136,12 @@
     obs-studio
     peco
     (callPackage ./pict.nix {})
+    pixcat
     rcm
     slack
     tig
     unzipNLS
+    # TODO: move to zellij
     tmux
     (callPackage ./trdsql.nix {})
     vim
@@ -147,6 +152,7 @@
     xorg.xmodmap
     xsecurelock
     xsensors
+    zellij
     zoom-us
   ];
 

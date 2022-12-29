@@ -10,6 +10,7 @@
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       ./fprintd.nix
+      ./fonts.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -52,14 +53,6 @@
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
   # };
-  fonts.fonts = with pkgs; [
-    nerdfonts
-    rictydiminished-with-firacode
-    source-han-mono
-    source-han-code-jp
-    source-han-sans-japanese
-    source-han-serif-japanese
-  ];
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -138,6 +131,7 @@
     libreoffice
     lm_sensors
     microsoft-edge
+    nix-prefetch-scripts
     obs-studio
     peco
     (callPackage ./pict.nix {})

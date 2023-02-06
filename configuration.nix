@@ -105,7 +105,9 @@
     # TODO: move to kitty
     alacritty
     azure-cli
+    colordiff
     google-chrome
+    delta
     direnv
     docker-compose
     easyeffects
@@ -124,6 +126,7 @@
     hub
     jq
     jwt-cli
+    k9s
     keybase-gui
     kitty
     kitty-themes

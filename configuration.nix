@@ -105,6 +105,7 @@
     # TODO: move to kitty
     alacritty
     azure-cli
+    bundix
     colordiff
     google-chrome
     delta
@@ -131,17 +132,21 @@
     kitty
     kitty-themes
     kubectl
+    kubelogin
     libreoffice
     lm_sensors
     microsoft-edge
     nix-prefetch-scripts
+    nodejs
     obs-studio
     peco
     (callPackage ./pict.nix {})
     pixcat
     rcm
+    ruby
     slack
     tig
+    unar
     unzipNLS
     # TODO: move to zellij
     tmux
@@ -151,6 +156,7 @@
     wineWowPackages.stable
     wineWowPackages.fonts
     winetricks
+    xclip
     xorg.xmodmap
     xsecurelock
     xsensors

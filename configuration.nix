@@ -39,11 +39,12 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8/UTF-8";
+  i18n.defaultLocale = "ja_JP.UTF-8/UTF-8";
   i18n.supportedLocales = [
+    "C"
     "C.UTF-8/UTF-8"
-    config.i18n.defaultLocale
     "ja_JP.UTF-8/UTF-8"
+    "en_US.UTF-8/UTF-8"
   ];
   i18n.inputMethod.enabled = "fcitx";
   i18n.inputMethod.fcitx.engines = with pkgs; [

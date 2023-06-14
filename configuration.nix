@@ -17,9 +17,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernel.sysctl = {
-    "fs.inotify.max_user_watches" = "999999";
-    "fs.inotify.max_queued_events" = "999999";
-    "fs.inotify.max_user_instances" = "999999";
+    "fs.inotify.max_user_watches" = "999999999";
+    "fs.inotify.max_queued_events" = "999999999";
+    "fs.inotify.max_user_instances" = "999999999";
   };
 
   # networking.hostName = "nixos"; # Define your hostname.
@@ -102,6 +102,7 @@
   environment.systemPackages = with pkgs; [
     _1password-gui
     _1password
+    android-studio
     # TODO: move to kitty
     alacritty
     azure-cli
@@ -115,7 +116,6 @@
     emacs
     firefox
     gh
-    genymotion
     ghq
     gimp
     git

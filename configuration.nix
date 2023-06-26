@@ -45,9 +45,10 @@
     "ja_JP.UTF-8/UTF-8"
     "en_US.UTF-8/UTF-8"
   ];
-  i18n.inputMethod.enabled = "fcitx";
-  i18n.inputMethod.fcitx.engines = with pkgs; [
-    fcitx-engines.mozc
+  i18n.inputMethod.enabled = "fcitx5";
+  i18n.inputMethod.fcitx5.addons = with pkgs; [
+    fcitx5-gtk
+    fcitx5-mozc
   ];
   # console = {
   #   font = "Lat2-Terminus16";

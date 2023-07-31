@@ -74,7 +74,7 @@
     enable = true;
     locker = "${pkgs.xsecurelock}/bin/xsecurelock";
   };
-  
+
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
@@ -143,6 +143,8 @@
     peco
     (callPackage ./pict.nix {})
     pixcat
+    qmk
+    qmk-udev-rules
     rcm
     ruby
     slack
@@ -188,7 +190,7 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
-  
+
   # YubiKey smartcard mode
   services.pcscd.enable = true;
 
@@ -212,5 +214,6 @@
   virtualisation = {
     docker.enable = true;
   };
+  hardware.keyboard.qmk.enable = true;
 }
 

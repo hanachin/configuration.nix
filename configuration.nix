@@ -117,6 +117,7 @@
     emacs
     firefox
     gh
+    gh-actions-cache
     ghq
     gimp
     git

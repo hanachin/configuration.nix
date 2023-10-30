@@ -111,6 +111,7 @@
     colordiff
     google-chrome
     delta
+    deno
     direnv
     docker-compose
     easyeffects

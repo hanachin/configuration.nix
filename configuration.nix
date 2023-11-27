@@ -109,6 +109,7 @@
     azure-cli
     bundix
     colordiff
+    coq
     google-chrome
     delta
     deno
@@ -132,6 +133,7 @@
     jwt-cli
     k9s
     keybase-gui
+    kicad
     kitty
     kitty-themes
     kubectl

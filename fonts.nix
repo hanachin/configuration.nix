@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     google-fonts
     nerdfonts
     rictydiminished-with-firacode

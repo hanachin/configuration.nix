@@ -11,8 +11,8 @@ buildGoModule rec {
     sha256 = "05q1g8836k372pinbqs2zlpszrbczxinha4axkns0m0iq6zayvr9";
   };
 
-  # vendorSha256 = lib.fakeSha256;
-  vendorSha256 = "uJAf0gw/QQhmdadOPJdxAbf8BVfr2htllLAXpRIYtwE=";
+  # vendorHash = lib.fakeSha256;
+  vendorHash = "sha256-uJAf0gw/QQhmdadOPJdxAbf8BVfr2htllLAXpRIYtwE=";
 
   meta = with lib; {
     description = "CLI tool that can execute SQL queries on CSV, LTSV, JSON and TBLN.";

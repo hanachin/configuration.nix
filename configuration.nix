@@ -116,6 +116,7 @@
     direnv
     docker-compose
     easyeffects
+    envchain
     emacs
     firefox
     gh
@@ -147,6 +148,7 @@
     peco
     (callPackage ./pict.nix {})
     pixcat
+    postgresql
     qmk
     qmk-udev-rules
     rcm
@@ -167,6 +169,7 @@
     xorg.xmodmap
     xsecurelock
     xsensors
+    yq
     zellij
     zoom-us
   ];

@@ -7,7 +7,10 @@
 {
   nixpkgs.config.allowUnfree = true;
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      <nixos-hardware/dell/xps/15-9510>
+      <nixos-hardware/dell/xps/15-9510/nvidia>
+      # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       ./fprintd.nix
       ./fonts.nix
@@ -57,24 +60,9 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-
-
   # Enable the GNOME Desktop Environment.
-  # services.xserver.displayManager.gdm.enable = true;
-  # services.xserver.displayManager.gdm.debug = true;
-  services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
-  programs.xss-lock = {
-    enable = true;
-    lockerCommand = "${pkgs.xautolock}/bin/xautolock -locknow";
-  };
-  services.xserver.xautolock = {
-    time = 5;
-    enable = true;
-    locker = "${pkgs.xsecurelock}/bin/xsecurelock";
-  };
-
 
   # Configure keymap in X11
   # services.xserver.layout = "us";

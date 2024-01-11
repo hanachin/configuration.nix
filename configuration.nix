@@ -8,8 +8,6 @@
   nixpkgs.config.allowUnfree = true;
   imports =
     [
-      <nixos-hardware/dell/xps/15-9510>
-      <nixos-hardware/dell/xps/15-9510/nvidia>
       # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       ./fprintd.nix
@@ -137,8 +135,6 @@
     (callPackage ./pict.nix {})
     pixcat
     postgresql
-    qmk
-    qmk-udev-rules
     rcm
     ruby
     slack
@@ -209,6 +205,5 @@
   virtualisation = {
     docker.enable = true;
   };
-  hardware.keyboard.qmk.enable = true;
 }
 

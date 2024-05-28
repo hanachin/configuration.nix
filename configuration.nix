@@ -64,7 +64,7 @@
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
-  services.xserver.xkbOptions = "ctrl:nocaps";
+  services.xserver.xkb.options = "ctrl:nocaps";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
@@ -74,7 +74,7 @@
   hardware.pulseaudio.enable = false;
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.sei = {
@@ -168,7 +168,7 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
-    pinentryFlavor = "gnome3";
+    pinentryPackage = pkgs.pinentry-gnome3;
   };
   programs.wireshark.enable = true;
   programs.wireshark.package = pkgs.wireshark-qt;

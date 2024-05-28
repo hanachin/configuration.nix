@@ -116,6 +116,7 @@
     heroku
     home-manager
     hub
+    inkscape
     jq
     jwt-cli
     k9s
@@ -135,6 +136,7 @@
     (callPackage ./pict.nix {})
     pixcat
     postgresql
+    protobuf
     rcm
     ruby
     slack
@@ -143,6 +145,7 @@
     unzipNLS
     # TODO: move to zellij
     tmux
+    trurl
     (callPackage ./trdsql.nix {})
     vim
     vscode

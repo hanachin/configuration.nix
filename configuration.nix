@@ -99,7 +99,6 @@
     google-chrome
     delta
     deno
-    direnv
     docker-compose
     easyeffects
     envchain
@@ -172,6 +171,7 @@
   };
   programs.wireshark.enable = true;
   programs.wireshark.package = pkgs.wireshark-qt;
+  programs.direnv.enable = true;
 
   # List services that you want to enable:
   security.rtkit.enable = true;

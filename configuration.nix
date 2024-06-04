@@ -137,7 +137,7 @@
     postgresql
     protobuf
     rcm
-    ruby
+    ruby_3_3
     slack
     tig
     unar

@@ -93,7 +93,6 @@
     # TODO: move to kitty
     alacritty
     azure-cli
-    bundix
     colordiff
     coq
     google-chrome
@@ -116,7 +115,6 @@
     home-manager
     hub
     inkscape
-    jq
     jwt-cli
     k9s
     keybase-gui
@@ -134,10 +132,7 @@
     peco
     (callPackage ./pict.nix {})
     pixcat
-    postgresql
-    protobuf
     rcm
-    ruby_3_3
     slack
     tig
     unar

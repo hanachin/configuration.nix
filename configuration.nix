@@ -203,5 +203,7 @@
   virtualisation = {
     docker.enable = true;
   };
+  
+  hardware.nvidia.open = false;
 }
 

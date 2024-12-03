@@ -46,7 +46,8 @@
     "ja_JP.UTF-8/UTF-8"
     "en_US.UTF-8/UTF-8"
   ];
-  i18n.inputMethod.enabled = "fcitx5";
+  i18n.inputMethod.enable = true;
+  i18n.inputMethod.type = "fcitx5";
   i18n.inputMethod.fcitx5.addons = with pkgs; [
     fcitx5-gtk
     fcitx5-mozc
@@ -88,7 +89,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     _1password-gui
-    _1password
+    _1password-cli
     android-studio
     # TODO: move to kitty
     alacritty
@@ -109,8 +110,8 @@
     gimp
     git
     gnomeExtensions.appindicator
-    gnome.gnome-sound-recorder
-    gnome.gnome-tweaks
+    gnome-sound-recorder
+    gnome-tweaks
     heroku
     home-manager
     hub
@@ -130,7 +131,7 @@
     nodejs
     obs-studio
     peco
-    (callPackage ./pict.nix {})
+    # (callPackage ./pict.nix {})
     pixcat
     rcm
     slack
@@ -203,7 +204,7 @@
   virtualisation = {
     docker.enable = true;
   };
-  
+
   hardware.nvidia.open = false;
 }
 

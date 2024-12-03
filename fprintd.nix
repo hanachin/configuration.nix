@@ -9,9 +9,4 @@
     };
   };
   systemd.services."fprintd".environment."G_MESSAGES_DEBUG" = "all"; # for good measure
-
-  security.pam.services = {
-    login.fprintAuth = true;
-    xscreensaver.fprintAuth = true;
-  };
 }

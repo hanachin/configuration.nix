@@ -90,58 +90,31 @@
   environment.systemPackages = with pkgs; [
     _1password-gui
     _1password-cli
-    android-studio
-    # TODO: move to kitty
-    alacritty
-    azure-cli
-    colordiff
-    coq
     google-chrome
-    delta
-    deno
     docker-compose
-    easyeffects
     envchain
     emacs
     firefox
     gh
     gh-actions-cache
     ghq
-    gimp
     git
     gnomeExtensions.appindicator
     gnome-sound-recorder
     gnome-tweaks
-    heroku
     home-manager
     hub
-    inkscape
-    jwt-cli
-    k9s
     keybase-gui
-    kicad
-    kitty
-    kitty-themes
-    kubectl
-    kubelogin
     libreoffice
-    lm_sensors
     microsoft-edge
     nix-prefetch-scripts
-    nodejs
     obs-studio
     peco
-    # (callPackage ./pict.nix {})
-    pixcat
     rcm
     slack
     tig
     unar
-    unzipNLS
-    # TODO: move to zellij
     tmux
-    trurl
-    (callPackage ./trdsql.nix {})
     vim
     vscode
     wineWowPackages.stable
@@ -151,8 +124,6 @@
     xorg.xmodmap
     xsecurelock
     xsensors
-    yq
-    zellij
     zoom-us
   ];
 

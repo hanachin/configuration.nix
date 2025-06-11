@@ -41,11 +41,7 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "ja_JP.UTF-8/UTF-8";
-  i18n.supportedLocales = [
-    "C.UTF-8/UTF-8"
-    "ja_JP.UTF-8/UTF-8"
-    "en_US.UTF-8/UTF-8"
-  ];
+  i18n.extraLocales = "all";
   i18n.inputMethod.enable = true;
   i18n.inputMethod.type = "fcitx5";
   i18n.inputMethod.fcitx5.addons = with pkgs; [
@@ -72,7 +68,7 @@
 
   # Enable sound.
   # sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
@@ -106,7 +102,6 @@
     hub
     keybase-gui
     libreoffice
-    microsoft-edge
     nix-prefetch-scripts
     obs-studio
     peco
